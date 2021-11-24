@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 37</title>
+    <script>
+      function pasa(valor) {
+        window.history.go(valor);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="button" value="Atrás" onClick="pasa(-1);" /> <br />
+      <input type="button" value="Adelante" onClick="pasa(1);" /> <br /><br />
+      <a href="../assets/popups/popup.html">ir a la página AB</a><br /><br />
+    </div>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

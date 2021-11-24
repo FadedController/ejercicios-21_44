@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 40</title>
+    <script>
+      function fecha() {
+        var obj_fecha = new Date();
+        var completo = obj_fecha.toGMTString();
+        var hora = obj_fecha.getHours();
+        var minuto = obj_fecha.getMinutes();
+        var segundo = obj_fecha.getSeconds();
+        var dia = obj_fecha.getDate();
+        var mes = obj_fecha.getMonth() + 1;
+        var anis = obj_fecha.getYear();
+        alert(hora + ":" + minuto + ":" + segundo);
+        alert(dia + "/" + mes + "/" + anis);
+        alert(completo);
+      }
+      window.onload = fecha;
+    </script>
+  </head>
+  <body>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

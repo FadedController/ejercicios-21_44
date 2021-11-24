@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 23</title>
+    <script>
+      function viaje() {
+        var valor = destino.value;
+        var cadena;
+        switch (valor) {
+          case "1":
+            cadena =
+              "Guadalajara. Precio: $17,900, hotel 5 estrellas, desayuno bufete incluido, 2 adultos y 2 niños";
+            break;
+          case "2":
+            cadena =
+              "Moscu. Precio: $87,000, vuelo redondo, hotel 5 estrellas, 8 noches, 1 adulto, tour incluido.";
+            break;
+          case "3":
+            cadena = "Paris. Precio: $57,900";
+            break;
+          case "4":
+            cadena = "Roma. Precio: $58,900";
+            break;
+          case "5":
+            cadena =
+              "Madrid. Precio: $59,000, vuelo redondo, 8 días en hostal Premium, vino tinto incluido";
+            break;
+        }
+        alert(cadena);
+      }
+    </script>
+  </head>
+  <body>
+    <select size="1" name="destino" onChange="viaje();">
+      <option value="1">Guadalajara</option>
+      <option value="2">Moscu</option>
+      <option value="3">Paris</option>
+      <option value="4">Roma</option>
+      <option value="5">Madrid</option>
+    </select>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

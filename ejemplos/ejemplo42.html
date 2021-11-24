@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 42</title>
+    <script>
+      function opera(valor) {
+        var resultado;
+        var n1 = parseInt(document.getElementById("n1").value);
+        var n2 = parseInt(document.getElementById("n2").value);
+        switch (valor) {
+          case "sqrt":
+            resultado = Math.sqrt(n1);
+            break;
+          case "pwr":
+            resultado = Math.pow(n1, n2);
+            break;
+          case "max":
+            resultado = Math.max(n1, n2);
+            break;
+          case "sin":
+            resultado = Math.sin(n1);
+            break;
+          default:
+            resultado = "Operación no válida";
+        }
+        document.getElementById("resultado").value = resultado;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      Numero 1: <input type="text" id="n1" />
+      <br />
+      Numero 2: <input type="text" id="n2" />
+      <br />
+      <input type="button" value="Raiz Cuadrada" onclick="opera('sqrt')" />
+      <input type="button" value="Potencia" onclick="opera('pwr')" />
+      <input type="button" value="Maximo" onclick="opera('max')" />
+      <input type="button" value="Seno" onclick="opera('sin')" />
+      <br />
+      <input type="text" id="resultado" size="10" />
+      <br />
+    </div>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

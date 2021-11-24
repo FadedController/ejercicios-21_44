@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 30</title>
+    <script>
+      function cambio(valor) {
+        if (valor == "imagen1") img.src = "../assets/img/checo_sad.jpg";
+        else img.src = "../assets/img/checo_happy.jpeg";
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <select size="3" name="lista" onChange="cambio(value);">
+        <option value="imagen1">Imagen 1</option>
+        <option value="imagen2">Imagen 2</option>
+      </select>
+      <br />
+      <img name="img" src="../assets/img/checo_sad.jpg" height="200px" />
+    </div>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

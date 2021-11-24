@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 32</title>
+    <script>
+      // A function that takes an element id and moves it up and down depending on the viewport size
+      function move(id) {
+        var elem = document.getElementById(id);
+        var top = 0;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (top == 350) {
+            clearInterval(id);
+          } else {
+            top++;
+            elem.style.top = top + "px";
+          }
+        }
+      }
+      const run = () => {
+        move("img-1");
+        move("img-2");
+      };
+
+      // Run the run function when the page loads
+      window.onload = run;
+    </script>
+  </head>
+  <body>
+    <img
+      id="img-1"
+      src="../assets/img/checo_happy.jpeg"
+      style="position: absolute; left: 12px; top: 35"
+      height="200px"
+    />
+    <img
+      id="img-2"
+      src="../assets/img/checo_sad.jpg"
+      style="position: absolute; left: 380px; top: 35px"
+      height="200px"
+    />
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 21</title>
+
+    <script>
+      var banco = 100;
+      var num_secreto = 0;
+      function genera() {
+        num_secreto = Math.random() * 3;
+        num_secreto = Math.round(num_secreto);
+        if (num_secreto == 0) num_secreto = 3;
+      }
+      function juego(valor) {
+        if (num_secreto == valor) {
+          alert("Enhorabuena");
+          banco += 100;
+          genera();
+        } else {
+          banco -= 50;
+          genera();
+        }
+        const caja = document.getElementById("caja");
+        caja.value = banco;
+      }
+    </script>
+  </head>
+  <body onload="genera();">
+    Apuesta:
+    <br />
+    1<input type="radio" name="R1" onClick="juego(1)" /> <br />
+    2<input type="radio" name="R1" onClick="juego(2)" /> <br />
+    3<input type="radio" name="R1" onClick="juego(3)" /> <br />
+    banco:
+    <input type="text" id="caja" size="20" value="100" />
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 34</title>
+    <script>
+      var v1;
+      function abre() {
+        v1 = window.open(
+          "../assets/popups/popup.html",
+          "v",
+          "status=yes resizable=yes"
+        );
+      }
+      function opera(valor) {
+        switch (valor) {
+          case 1:
+            cargapagina();
+            break;
+          case 2:
+            print();
+            break;
+          case 3:
+            var modal;
+            modal = window.showModalDialog(
+              "../assets/popups/anotherpopup.html"
+            );
+            break;
+        }
+      }
+      function cargapagina() {
+        // Check if v1 still exists
+        if (v1.location.href) {
+          v1.location.href = "../assets/popups/anotherpopup.html";
+        } else {
+          abre();
+        }
+      }
+
+      // Run the abre function on page load
+      window.onload = abre;
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="button" value="Cargar" onClick="opera(1);" /> <br />
+      <input type="button" value="Imprime" onClick="opera(2);" /> <br />
+      <input type="button" value="Modal" onClick="opera(3);" />
+    </div>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

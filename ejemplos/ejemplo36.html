@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 36</title>
+    <script>
+      var v1;
+      function ver() {
+        var fecha;
+        var urlantes;
+        var urlactual;
+        fecha = v1.document.lastModified;
+        urlantes = v1.document.referrer;
+        urlactual = v1.document.location;
+        v1.document.writeln("Creada en " + fecha);
+        v1.document.writeln("Dirección " + urlactual);
+        v1.document.write("Url anterior " + urlantes);
+      }
+      function abre() {
+        v1 = window.open(
+          "../assets/popups/popup.html",
+          "v",
+          "status=yes resizable=yes"
+        );
+      }
+
+      // Run the abre function on page load
+      window.onload = abre;
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="button" value="Info. Pag" onClick="ver();" />
+    </div>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

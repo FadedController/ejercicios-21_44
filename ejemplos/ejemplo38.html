@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 38</title>
+    <script>
+      function informa() {
+        var v1;
+        var nombre;
+        var cpu;
+        var sistema;
+        v1 = window.open("", "v", "width=300 height=150");
+        v1.document.bgColor = "gray";
+        nombre = navigator.appName;
+        cpu = navigator.cpuClass;
+        sistema = navigator.platform;
+        v1.document.writeln("Navegador: " + nombre);
+        v1.document.writeln("Sistema: " + sistema);
+        v1.document.write("Micro: " + cpu);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Info." onClick="informa();" />
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

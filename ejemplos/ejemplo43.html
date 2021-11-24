@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 43</title>
+    <script>
+      var secret;
+      function generate() {
+        // Generate a random number between 1 and 10:
+        secret = Math.random() * 10;
+        secret = Math.round(secret);
+        if (secret === 0) secret = 10;
+      }
+      function game() {
+        var guess = prompt("Adivina el número secreto (1-10)");
+        guess = Number(guess);
+        if (guess === secret) {
+          alert("¡Ganaste!");
+        } else if (guess > secret) {
+          alert("El número secreto es menor");
+          game();
+        } else {
+          alert("El número secreto es mayor");
+          game();
+        }
+      }
+
+      window.onload = function () {
+        generate();
+        game();
+      };
+    </script>
+  </head>
+  <body>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

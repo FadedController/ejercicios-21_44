@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 35</title>
+    <script>
+      function fondo(colores) {
+        testBg.style.backgroundColor = colores;
+      }
+      function texto(colores) {
+        testText.style.color = colores;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      COLOR DEL FONDO <br />
+      BLANCO<input type="radio" name="F" onClick="fondo('white')" />
+      <br />
+      ROJO<input type="radio" name="F" onClick="fondo('red')" /> <br />
+      AZUL<input type="radio" name="F" onClick="fondo('blue');" /> <br />
+      <br />
+      COLOR DEL TEXTO <br />
+      NEGRO<input type="radio" name="T" onClick="texto('black');" />
+      <br />
+      GRIS<input type="radio" name="T" onClick="texto('gray');" /> <br />
+      VERDE<input type="radio" name="T" onClick="texto('green');" />
+    </div>
+    <div id="testBg">
+      <p id="testText">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+        pariatur eum eveniet placeat, rerum dignissimos unde delectus,
+        consequatur cupiditate quaerat culpa amet, asperiores harum molestiae?
+        Quidem ullam quod nisi in.
+      </p>
+    </div>
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>

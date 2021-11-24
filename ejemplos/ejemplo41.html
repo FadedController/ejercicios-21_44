@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ejemplo 41</title>
+    <script>
+      setTimeout(reloj, 100);
+      function reloj() {
+        var tiempo = new Date();
+        var hora = tiempo.getHours();
+        var minuto = tiempo.getMinutes();
+        var segundo = tiempo.getSeconds();
+        var textohora = hora + ":" + minuto + ":" + segundo;
+        document.getElementsByName("caja")[0].value = textohora;
+        setTimeout(reloj, 500);
+        40;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="caja" size="10" />
+    <div>
+      <br />
+      <a href="../index.html">Regresar al menú</a>
+    </div>
+  </body>
+</html>
